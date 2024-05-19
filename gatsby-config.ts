@@ -12,7 +12,7 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "RgvFQcrmRTG12K-3OlxZFnMXnKC_J2rk76XJgVXe7GI",
+      "accessToken": "",
       "spaceId": ""
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
