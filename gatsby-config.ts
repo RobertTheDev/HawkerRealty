@@ -1,5 +1,9 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `hawkerrealty`,
@@ -12,10 +16,12 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "",
-      "spaceId": ""
+      "accessToken": process.env.ACCESS_TOKEN,
+      "spaceId": process.env.SPACE_ID
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", 
+  // "gatsby-plugin-google-gtag",
+   "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
